@@ -201,6 +201,11 @@ export type UseChatOptions = {
   onFinish?: (message: Message) => void;
 
   /**
+   * Callback function to be called when the chat is finished streaming. Includes data.
+   */
+  onFinishWithData?: (message: Message, data: JSONValue[]) => void;
+
+  /**
    * Callback function to be called when an error is encountered.
    */
   onError?: (error: Error) => void;

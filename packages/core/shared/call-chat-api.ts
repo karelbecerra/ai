@@ -20,6 +20,7 @@ export async function callChatApi({
   onResponse,
   onUpdate,
   onFinish,
+  onFinishWithData,
   generateId,
 }: {
   api: string;
@@ -33,6 +34,7 @@ export async function callChatApi({
   onResponse?: (response: Response) => void | Promise<void>;
   onUpdate: (merged: Message[], data: JSONValue[] | undefined) => void;
   onFinish?: (message: Message) => void;
+  onFinishWithData?: (message: Message, data: JSONValue[]) => void;  
   generateId: IdGenerator;
 }) {
   const response = await fetch(api, {
@@ -82,7 +84,10 @@ export async function callChatApi({
       update: onUpdate,
       onFinish(prefixMap) {
         if (onFinish && prefixMap.text != null) {
-          onFinish(prefixMap.text);
+          if( onFinishWithData && prefixMap.data != null) 
+            onFinishWithData(prefixMap.text, prefixMap.data)
+          else 
+            onFinish(prefixMap.text);
         }
       },
       generateId,
