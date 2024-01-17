@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
-import { OpenAIStream } from 'ai';
-import { Tokens } from 'ai/react';
+import { Tokens } from "../../../../../packages/core/react";
+import { OpenAIStream } from "../../../../../packages/core/streams/openai-stream";
 
 export const runtime = 'edge';
 

@@ -1,10 +1,8 @@
-import {
-  OpenAIStream,
-  StreamingTextResponse,
-  Tool,
-  ToolCallPayload,
-  experimental_StreamData,
-} from 'ai';
+import { Tool } from "../../../../../packages/core/shared/types";
+import { ToolCallPayload } from "../../../../../packages/core/streams/ai-stream";
+import { experimental_StreamData } from "../../../../../packages/core/streams/stream-data";
+import { OpenAIStream } from "../../../../../packages/core/streams/openai-stream";
+import { StreamingTextResponse } from "../../../../../packages/core/streams/streaming-text-response";
 import OpenAI from 'openai';
 
 // Create an OpenAI API client (that's edge friendly!)

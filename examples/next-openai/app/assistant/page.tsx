@@ -1,6 +1,7 @@
 'use client';
 
-import { Message, experimental_useAssistant as useAssistant } from 'ai/react';
+import { Message } from "../../../../packages/core/shared/types";
+import { experimental_useAssistant as useAssistant } from "../../../../packages/core/react/use-assistant";
 import { useEffect, useRef } from 'react';
 
 const roleToColorMap: Record<Message['role'], string> = {

@@ -1,7 +1,10 @@
 'use client';
 
-import { ChatRequest, ToolCallHandler, nanoid } from 'ai';
-import { Message, useChat } from 'ai/react';
+import { useChat } from "../../../../packages/core/react/use-chat";
+import { Message } from "../../../../packages/core/react/use-chat";
+import { ChatRequest } from "../../../../packages/core";
+import { ToolCallHandler } from "../../../../packages/core";
+import { nanoid } from "../../../../packages/core";
 
 export default function Chat() {
   const toolCallHandler: ToolCallHandler = async (chatMessages, toolCalls) => {

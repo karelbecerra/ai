@@ -1,7 +1,9 @@
 'use client';
 
-import { FunctionCallHandler, nanoid } from 'ai';
-import { Message, useChat } from 'ai/react';
+import { FunctionCallHandler } from "../../../../packages/core/shared/types";
+import { nanoid } from "../../../../packages/core/shared/utils";
+import { useChat } from "../../../../packages/core/react/use-chat";
+import { Message } from "../../../../packages/core/shared/types";
 
 export default function Chat() {
   const functionCallHandler: FunctionCallHandler = async (

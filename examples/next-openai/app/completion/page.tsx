@@ -1,6 +1,6 @@
 'use client';
 
-import { useCompletion } from 'ai/react';
+import { useCompletion } from "../../../../packages/core/react/use-completion";
 
 export default function Chat() {
   const { completion, input, handleInputChange, handleSubmit, error, data } =

@@ -1,8 +1,6 @@
-import {
-  OpenAIStream,
-  StreamingTextResponse,
-  experimental_StreamData,
-} from 'ai';
+import { experimental_StreamData } from "../../../../../packages/core/streams/stream-data";
+import { OpenAIStream } from "../../../../../packages/core/streams/openai-stream";
+import { StreamingTextResponse } from "../../../../../packages/core/streams/streaming-text-response";
 import OpenAI from 'openai';
 import type { ChatCompletionCreateParams } from 'openai/resources/chat';
 

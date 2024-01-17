@@ -1,4 +1,4 @@
-import { experimental_AssistantResponse } from 'ai';
+import { experimental_AssistantResponse } from "../../../../../packages/core/streams/assistant-response";
 import OpenAI from 'openai';
 import { MessageContentText } from 'openai/resources/beta/threads/messages/messages';
 

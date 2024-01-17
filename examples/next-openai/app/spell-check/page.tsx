@@ -1,6 +1,6 @@
 'use client';
 
-import { useCompletion } from 'ai/react';
+import { useCompletion } from "../../../../packages/core/react/use-completion";
 import { useState, useCallback } from 'react';
 
 export default function PostEditorPage() {

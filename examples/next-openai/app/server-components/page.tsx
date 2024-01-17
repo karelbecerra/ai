@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
-import { OpenAIStream } from 'ai';
 import { Suspense } from 'react';
+import { OpenAIStream } from "../../../../packages/core/streams/openai-stream";
 
 // Optional, but recommended: run on the edge runtime.
 // See https://vercel.com/docs/concepts/functions/edge-functions

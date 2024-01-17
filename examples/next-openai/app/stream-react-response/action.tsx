@@ -1,12 +1,11 @@
 'use server';
 
-import {
-  Message,
-  OpenAIStream,
-  experimental_StreamData,
-  experimental_StreamingReactResponse,
-} from 'ai';
-import { experimental_buildOpenAIMessages } from 'ai/prompts';
+import { Message } from "../../../../packages/core/shared/types";
+import { experimental_StreamingReactResponse } from "../../../../packages/core/streams/streaming-react-response";
+import { experimental_StreamData } from "../../../../packages/core/streams/stream-data";
+import { OpenAIStream } from "../../../../packages/core/streams/openai-stream";
+import { StreamingTextResponse } from "../../../../packages/core/streams/streaming-text-response";
+import { experimental_buildOpenAIMessages } from "../../../../packages/core/prompts/openai";
 import OpenAI from 'openai';
 import { ChatCompletionCreateParams } from 'openai/resources/chat';
 
