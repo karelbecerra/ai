@@ -89,6 +89,7 @@ const getStreamedResponse = async (
   abortControllerRef: React.MutableRefObject<AbortController | null>,
   generateId: IdGenerator,
   onFinish?: (message: Message) => void,
+  onFinishWithData?: (message: Message, data: JSONValue[]) => void,  
   onResponse?: (response: Response) => void | Promise<void>,
   sendExtraMessageFields?: boolean,
 ) => {
@@ -197,6 +198,7 @@ const getStreamedResponse = async (
       mutateStreamData([...(existingData || []), ...(data || [])], false);
     },
     onFinish,
+    onFinishWithData,
     generateId,
   });
 };
@@ -211,6 +213,7 @@ export function useChat({
   experimental_onToolCall,
   onResponse,
   onFinish,
+  onFinishWithData,
   onError,
   credentials,
   headers,
@@ -296,6 +299,7 @@ export function useChat({
               abortControllerRef,
               generateId,
               onFinish,
+              onFinishWithData,
               onResponse,
               sendExtraMessageFields,
             ),
